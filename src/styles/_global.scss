@@ -1,0 +1,31 @@
+html {
+  @media (min-width: 1600px) {
+    font-size: 120%;
+  }
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+body {
+  background-color: $white;
+  font-family: $fontPrimary;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+// BUTTON
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+}
+// for mobile nav
+.body-locked {
+  overflow: hidden;
+}

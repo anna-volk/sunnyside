@@ -1,0 +1,75 @@
+.testim {
+  text-align: center;
+  padding: 160px 0;
+  @media (max-width: 480px) {
+    padding: 64px 24px 86px;
+  }
+  .title {
+    font-family: $fontHeadings;
+    font-weight: 900;
+    font-size: $font20;
+    line-height: 125%;
+    letter-spacing: 5px;
+    color: $grey;
+    margin-bottom: 4em;
+    text-transform: capitalize;
+    @media (max-width: 480px) {
+      font-size: $font16;
+      letter-spacing: 4px;
+    }
+  }
+  .testim-inner {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.88em;
+    padding: 0 1.5em;
+    @media (max-width: 1200px) {
+      gap: 64px;
+    }
+    @media (max-width: 480px) {
+      padding: unset;
+    }
+  }
+  .testim-item {
+    max-width: 350px;
+    .testim-image {
+      .testim-img {
+        margin: 0 auto;
+        border-radius: 50%;
+        width: 4.5rem;
+        aspect-ratio: 1/1;
+      }
+    }
+    .text {
+      font-family: $fontPrimary;
+      font-weight: 600;
+      font-size: $font18;
+      line-height: 178%;
+      letter-spacing: -0.128571px;
+      color: $greyDarkVery;
+      margin: 3.2em 0 3.8em;
+      @media (max-width: 480px) {
+        margin: 1.78em 0;
+      }
+    }
+    .name {
+      font-family: $fontHeadings;
+      font-weight: 900;
+      font-size: $font18;
+      line-height: 122%;
+      letter-spacing: -0.128571px;
+      color: $dark;
+      margin-bottom: 0.5em;
+    }
+    .position {
+      font-family: $fontPrimary;
+      font-weight: 600;
+      font-size: $font14;
+      line-height: 179%;
+      letter-spacing: -0.1px;
+      color: $grey;
+    }
+  }
+}

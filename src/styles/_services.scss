@@ -1,0 +1,87 @@
+.services-inner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+  }
+  .services-item {
+    text-align: center;
+    padding: 398px 190px 59px;
+    @media (min-width: 1600px) {
+      padding: 450px 120px 59px;
+    }
+    @media (max-width: 1400px) {
+      padding: 398px 80px 59px;
+    }
+    @media (max-width: 1024px) {
+      padding: 398px 30px 59px;
+    }
+    @media (max-width: 768px) {
+      padding: 398px 24px 59px;
+    }
+    .title {
+      font-family: $fontHeadings;
+      letter-spacing: -0.2px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: $font28;
+      line-height: 125%;
+      margin-bottom: 0.9em;
+    }
+    .text {
+      max-width: 340px;
+      margin: 0 auto;
+      font-family: $fontPrimary;
+      font-weight: 600;
+      font-size: $font16;
+      line-height: 169%;
+      letter-spacing: -0.114286px;
+    }
+  }
+}
+.design-item,
+.photo-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.design-item {
+  color: #24554a;
+  background-image: url("@img/services/desktop/cherry-desktop@1x.jpg");
+  background-image: image-set(
+    url("@img/services/desktop/cherry-desktop@1x.jpg") 1x,
+    url("@img/services/desktop/cherry-desktop@2x.jpg") 2x,
+    url("@img/services/desktop/cherry-desktop@3x.jpg") 3x
+  );
+  @media (max-width: 375px) {
+    background-image: url("@img/services/mobile/cherry-mobile@1x.jpg");
+    background-image: image-set(
+      url("@img/services/mobile/cherry-mobile@1x.jpg") 1x,
+      url("@img/services/mobile/cherry-mobile@2x.jpg") 2x,
+      url("@img/services/mobile/cherry-mobile@3x.jpg") 3x
+    );
+  }
+}
+.photo-item {
+  .title {
+    color: rgb(5, 44, 59, 0.75);
+  }
+  .text {
+    color: #19536c;
+  }
+  background-image: url("@img/services/desktop/orange-desktop@1x.jpg");
+  background-image: image-set(
+    url("@img/services/desktop/orange-desktop@1x.jpg") 1x,
+    url("@img/services/desktop/orange-desktop@2x.jpg") 2x,
+    url("@img/services/desktop/orange-desktop@3x.jpg") 3x
+  );
+
+  @media (max-width: 375px) {
+    background-image: url("@img/services/mobile/orange-mobile@1x.jpg");
+    background-image: image-set(
+      url("@img/services/mobile/orange-mobile@1x.jpg") 1x,
+      url("@img/services/mobile/orange-mobile@2x.jpg") 2x,
+      url("@img/services/mobile/orange-mobile@3x.jpg") 3x
+    );
+  }
+}

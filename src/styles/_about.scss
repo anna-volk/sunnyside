@@ -1,0 +1,133 @@
+.about {
+  // ROWS
+  .row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @media (max-width: 640px) {
+      grid-template-columns: 100%;
+    }
+  }
+  .row-1 {
+    .about-info {
+      justify-self: flex-end;
+      @media (max-width: 640px) {
+        justify-self: unset;
+      }
+    }
+    .about-image {
+      order: 2;
+      @media (max-width: 640px) {
+        order: initial;
+      }
+    }
+  }
+  // ABOUT-INFO
+  .about-info {
+    margin-inline: 110px;
+    margin-block: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 445px;
+    @media (min-width: 1600px) {
+      max-width: 600px;
+    }
+    @media (max-width: 1300px) {
+      margin-inline: 70px;
+    }
+    @media (max-width: 992px) {
+      margin-inline: 50px;
+    }
+    @media (max-width: 768px) {
+      margin-inline: 30px;
+    }
+    @media (max-width: 640px) {
+      align-items: center;
+      text-align: center;
+      max-width: 87%;
+      margin-inline: auto;
+    }
+
+    .about-title {
+      font-family: $fontHeadings;
+      font-weight: 900;
+      font-size: $h2FontSize;
+      line-height: 122%;
+      letter-spacing: -0.285714px;
+      color: $dark;
+      @media (min-width: 1600px) {
+        font-size: $font40;
+      }
+    }
+    .about-text {
+      font-family: $fontPrimary;
+      font-weight: 600;
+      font-size: $font18;
+      line-height: 167%;
+      letter-spacing: -0.128571px;
+      color: $greyDark;
+      margin: 1.78em 0 2.22em;
+      @media (max-width: 992px) {
+        margin: 1.33em 0 1.78em;
+      }
+    }
+    .about-link {
+      font-family: $fontHeadings;
+      font-size: $font15;
+      line-height: 167%;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $dark;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 115%;
+        height: 10px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 28px;
+        transition: 0.3s;
+      }
+    }
+  }
+  //   LINKS AFTER & HOVER
+  .row-1 {
+    .about-link {
+      &:before {
+        background: rgba(250, 212, 0, 0.25);
+      }
+      &:hover {
+        &::before {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  .row-2 {
+    .about-link {
+      &:before {
+        background-color: rgba(254, 120, 103, 0.25);
+      }
+      &:hover {
+        &::before {
+          background-color: $softRed;
+        }
+      }
+    }
+  }
+  // ABOUT-IMAGE
+
+  .about-image {
+    .about-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+    }
+  }
+}

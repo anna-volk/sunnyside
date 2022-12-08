@@ -1,0 +1,21 @@
+.projects {
+  .projects-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .projects-item {
+    overflow: hidden;
+    .projects-img {
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 0.8054/1;
+      width: 100.3%;
+      @media (max-width: 480px) {
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+}

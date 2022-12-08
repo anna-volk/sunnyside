@@ -1,0 +1,192 @@
+.header {
+  padding-top: 2.125em;
+  padding-bottom: 20.75em;
+  @media (max-width: 1300px) {
+    padding-bottom: 12em;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 8.5em;
+  }
+  @media (max-width: $burgerBreakpoint) {
+    padding-top: 2em;
+  }
+  @media (max-width: 375px) {
+    min-height: 100vh;
+  }
+
+  background-image: url("@img/hero/desktop/hero-bg-desktop@1x.jpg");
+  background-image: image-set(
+    url("@img/hero/desktop/hero-bg-desktop@1x.jpg") 1x,
+    url("@img/hero/desktop/hero-bg-desktop@2x.jpg") 2x,
+    url("@img/hero/desktop/hero-bg-desktop@3x.jpg") 3x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  //   MOBILE BG IMAGE
+  @media (max-width: 480px) {
+    background-image: url("@img/hero/mobile/hero-bg-mobile@1x.jpg");
+    background-image: image-set(
+      url("@img/hero/mobile/hero-bg-mobile@1x.jpg") 1x,
+      url("@img/hero/mobile/hero-bg-mobile@2x.jpg") 2x,
+      url("@img/hero/mobile/hero-bg-mobile@3x.jpg") 3x
+    );
+  }
+  // NAVIGATION
+  .nav {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    @media (max-width: $burgerBreakpoint) {
+      width: 87%;
+    }
+  }
+  //   LOGO
+  .logo-image {
+    margin-right: 1em;
+    .logo-img {
+      width: 170px;
+      height: 33px;
+      @media (max-width: 480px) {
+        width: 123px;
+        height: 24px;
+      }
+    }
+  }
+  //   NAV-LIST
+  .nav-list {
+    margin-left: auto;
+    align-items: center;
+    gap: 2.94em;
+    display: flex;
+    @media (max-width: $burgerBreakpoint) {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2em;
+      text-align: center;
+      margin-left: unset;
+      position: fixed;
+      top: 6.63em;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 87%;
+      background-color: $white;
+      padding: 3.94em 2em 2.44em;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 25px 25px;
+        border-color: transparent transparent $white transparent;
+      }
+    }
+    &.active {
+      display: flex;
+    }
+    .nav-item:not(:last-of-type) {
+      .nav-link {
+        font-family: $fontPrimary;
+        font-weight: 600;
+        font-size: 18px;
+        font-size: $font18;
+        line-height: 139%;
+        letter-spacing: -0.128571px;
+        color: $white;
+        text-transform: capitalize;
+        transition: opacity 0.3s;
+        &:hover {
+          @media (min-width: $burgerBreakpoint) {
+            color: rgba(255, 255, 255, 0.65);
+          }
+        }
+
+        @media (max-width: $burgerBreakpoint) {
+          font-size: $font20;
+          line-height: 125%;
+          letter-spacing: -0.142857px;
+          color: $greyDark;
+        }
+      }
+    }
+    // NAV-LINK BUTTON
+    .nav-btn {
+      background-color: $white;
+      border-radius: 28px;
+      font-family: $fontHeadings;
+      font-weight: 700;
+      font-size: $font15;
+      line-height: 167%;
+      letter-spacing: -0.107143px;
+      text-transform: uppercase;
+      color: $dark;
+      padding: 1em 2em;
+      transition: 0.3s;
+      &:hover {
+        @media (min-width: $burgerBreakpoint) {
+          background-color: rgba(255, 255, 255, 0.25);
+          color: $white;
+        }
+      }
+      @media (max-width: $burgerBreakpoint) {
+        color: $dark;
+        background-color: $yellow;
+      }
+    }
+  }
+  //   BURGER BUTTON
+  .burger-btn {
+    margin-left: auto;
+    background-image: url("@img/hero/btn-burger.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 18px;
+    display: none;
+    @media (max-width: $burgerBreakpoint) {
+      display: block;
+    }
+  }
+  //   HERO
+  .hero {
+    .hero-inner {
+      .hero-title {
+        margin: 1.875em 2em 1.7em;
+        text-align: center;
+        letter-spacing: 8.75px;
+        text-transform: uppercase;
+        color: $white;
+        line-height: 123%;
+        font-weight: 900;
+        font-size: $h1Font;
+        font-family: $fontHeadings;
+        @media (min-width: 1600px) {
+          font-size: $font56;
+        }
+        @media (max-width: 1300px) {
+          margin: 1.5em 2em 1em;
+        }
+        @media (max-width: 768px) {
+          margin: 2.2em 0.5em 1.3em;
+          letter-spacing: 6.25px;
+        }
+        @media (max-width: 375px) {
+          font-size: $font30;
+        }
+      }
+      .hero-deco-image {
+        .hero-deco {
+          margin: 0 auto;
+          width: 30px;
+          height: 107px;
+        }
+      }
+    }
+  }
+}

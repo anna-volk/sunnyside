@@ -1,0 +1,36 @@
+// COLORS
+$white: hsl(0, 0%, 100%);
+$grey: #a7abae;
+$greyDark: #818498;
+$greyDarkVery: #5a636c;
+$dark: #24303e;
+
+$cyanFooterText: #458c7e;
+$cyanFooterLinks: #2c7566;
+$footerBg: #90d4c6;
+$yellow: #fad400;
+$softRed: #fe7867;
+
+// TYPOGRAPHY
+$fontPrimary: "Barlow", sans-serif;
+$fontHeadings: "Fraunces", serif;
+$h1Font: clamp(2.5rem, calc(2.21rem + 1.43vw), 3.5rem);
+$h2FontSize: clamp(2rem, calc(1.83rem + 0.75vw), 2.5rem);
+$font56: 3.5rem;
+$font40: 2.5rem;
+$font30: 1.875rem;
+$font28: 1.75rem;
+$font20: 1.25rem;
+$font18: 1.125rem;
+$font16: 1rem;
+$font15: 0.9375rem;
+$font14: 0.875rem;
+$font13: 0.8125rem;
+$font10: 0.625rem;
+
+// font-family: 'Fraunces', serif;
+// font-weight: 900;
+//   font-family: "Barlow";
+//   font-weight: 600;
+
+$burgerBreakpoint: 768px;
